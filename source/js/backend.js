@@ -2,8 +2,10 @@
 
 (function () {
   var UrlData = {
-    LOAD: 'https://js.dump.academy/keksobooking/data',
-    SAVE: 'https://js.dump.academy/keksobooking'
+    LOAD: {
+      restaurants: 'https://raw.githubusercontent.com/cmrt2/test-task/master/restaurants.json',
+      restaurant: 'https://raw.githubusercontent.com/cmrt2/test-task/master/restaurants.json'
+    }
   };
 
   var REQUEST_TIMEOUT = 10000; // 10s
@@ -37,20 +39,20 @@
     return xhr;
   };
 
-  var load = function (onLoad, onError) {
+  var loadRestaurants = function (onLoad, onError) {
     var xhr = createRequest(onLoad, onError);
-    xhr.open('GET', UrlData.LOAD);
+    xhr.open('GET', UrlData.LOAD.restaurants);
     xhr.send();
   };
 
-  var save = function (data, onLoad, onError) {
+  var loadRestaurant = function (onLoad, onError) {
     var xhr = createRequest(onLoad, onError);
-    xhr.open('POST', UrlData.SAVE);
-    xhr.send(data);
+    xhr.open('GET', UrlData.LOAD.restaurant);
+    xhr.send();
   };
 
   window.backend = {
-    load: load,
-    save: save
+    loadRestaurants: loadRestaurants,
+    loadRestaurant: loadRestaurant
   };
 })();

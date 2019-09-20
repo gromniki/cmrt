@@ -12,88 +12,24 @@
 //= templates/main-menu.html
 
 <main class="page-main">
-
-
-
-
-  <section class="categories">
-    <h2 class="categories__title">Популярные услуги и товары нашего производства</h2>
-
-    <div class="categories__list">
-      <a class="categories__item" href="/">
-        <figure>
-          <img src="http://placehold.it/200x100" width="200" height="100" alt="">
-          <figcaption class="categories__text">Информационные стенды</figcaption>
-        </figure>
-      </a>
-      <a class="categories__item" href="/">
-        <figure>
-          <img src="http://placehold.it/200x100" width="200" height="100" alt="">
-          <figcaption class="categories__text">Таблички и навигация</figcaption>
-        </figure>
-      </a>
-
+  <section class="catalog">
+    <h2 class="catalog__title  visually-hidden">Каталог магазинов</h2>
+    <div class="catalog__list">
+      <!-- Вставляется разметка из тега template -->
     </div>
   </section>
-
-  <section class="rubricator  rubricator--big">
-    <h2 class="rubricator__title">Каталог трафаретов</h2>
-    <div class="rubricator__list">
-      <a class="rubricator__item" href="/">
-        <img src="/img/temp/stub-320-33.jpg" width="320" height="320" alt="">
-        <p>Название в&nbsp;две строчки либо в&nbsp;одну, главное, что на&nbsp;3&nbsp;оно&nbsp;не...</p>
-        <small>Артикул ТРФД001</small>
-        <b>от 20000 рублей</b>
-      </a>
-      <a class="rubricator__item" href="/">
-        <img src="/img/temp/stub-320-34.jpg" width="320" height="320" alt="">
-        <p>Название в&nbsp;две строчки либо в&nbsp;одну, главное, что на&nbsp;3&nbsp;оно&nbsp;не...</p>
-        <small>Артикул ТРФД001</small>
-        <b>от 20000 рублей</b>
-      </a>
-      <a class="rubricator__item" href="/">
-        <img src="/img/temp/stub-320-33.jpg" width="320" height="320" alt="">
-        <p>Название в&nbsp;две строчки либо в&nbsp;одну, главное, что на&nbsp;3&nbsp;оно&nbsp;не...</p>
-        <small>Артикул ТРФД001</small>
-        <b>от 20000 рублей</b>
-      </a>
-      <a class="rubricator__item" href="/">
-        <img src="/img/temp/stub-320-34.jpg" width="320" height="320" alt="">
-        <p>Название в&nbsp;две строчки либо в&nbsp;одну, главное, что на&nbsp;3&nbsp;оно&nbsp;не...</p>
-        <small>Артикул ТРФД001</small>
-        <b>от 20000 рублей</b>
-      </a>
-      <a class="rubricator__item" href="/">
-        <img src="/img/temp/stub-320-31.jpg" width="320" height="320" alt="">
-        <p>Название в&nbsp;две строчки либо в&nbsp;одну, главное, что на&nbsp;3&nbsp;оно&nbsp;не...</p>
-        <small>Артикул ТРФД001</small>
-        <b>от 20000 рублей</b>
-      </a>
-      <a class="rubricator__item" href="/">
-        <img src="/img/temp/stub-320-32.jpg" width="320" height="320" alt="">
-        <p>Название в&nbsp;две строчки либо в&nbsp;одну, главное, что на&nbsp;3&nbsp;оно&nbsp;не...</p>
-        <small>Артикул ТРФД001</small>
-        <b>от 20000 рублей</b>
-      </a>
-      <a class="rubricator__item" href="/">
-        <img src="/img/temp/stub-320-31.jpg" width="320" height="320" alt="">
-        <p>Название в&nbsp;две строчки либо в&nbsp;одну, главное, что на&nbsp;3&nbsp;оно&nbsp;не...</p>
-        <small>Артикул ТРФД001</small>
-        <b>от 20000 рублей</b>
-      </a>
-      <a class="rubricator__item" href="/">
-        <img src="/img/temp/stub-320-32.jpg" width="320" height="320" alt="">
-        <p>Название в&nbsp;две строчки либо в&nbsp;одну, главное, что на&nbsp;3&nbsp;оно&nbsp;не...</p>
-        <small>Артикул ТРФД001</small>
-        <b>от 20000 рублей</b>
-      </a>
-    </div>
-  </section>
-
-
 </main>
 
 //= templates/footer.html
+
+<template id="shop">
+  <a class="catalog__item" href="/">
+    <img src="/img/temp/stub-320-33.jpg" width="320" height="320" alt="">
+    <b>Макдоналдс - <span class="catalog__item-location">Газетный</span></b>
+    <p>РР</p>
+    <small>25 - 35 Min</small>
+  </a>
+</template>
 
 </body>
 </html>

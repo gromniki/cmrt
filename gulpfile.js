@@ -92,27 +92,14 @@ gulp.task('html', function () {
     .pipe(posthtml([
       include()
     ]))
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest(path.build.html));
 });
-
-/*gulp.task('html', function() {
-  gulp.src(src.html)
-    .pipe(rigger())
-    .pipe(gulpIf(env !== 'dev', minifyHTML()))
-    .pipe(gulp.dest(outputDir))
-    .pipe(connect.reload())
-});*/
 
 gulp.task('static', function () {
   return gulp.src(path.src.static)
     .pipe(gulp.dest(path.build.static));
 });
-
-/*gulp.task('php', function () {
-  return gulp.src(path.src.php)
-    .pipe(gulp.dest(path.build.php));
-});*/
 
 gulp.task('libs', function () {
   return gulp.src(path.src.libs)
@@ -130,6 +117,7 @@ gulp.task('js', function () {
     }))
     .pipe(plumber())
     .pipe(sourcemap.init())
+    .pipe(concat('main.js'))
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(sourcemap.write('.'))
@@ -160,8 +148,7 @@ gulp.task('server', function () {
     notify: false,
     open: true,
     cors: true,
-    ui: false,
-    // tunnel: 'zpos'
+    ui: false
   });
 
   gulp.watch(path.src.sass, gulp.series('css'));
