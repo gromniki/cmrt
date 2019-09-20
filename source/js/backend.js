@@ -1,21 +1,21 @@
 'use strict';
 
 (function () {
-  var UrlData = {
+  const UrlData = {
     LOAD: {
       restaurants: 'https://raw.githubusercontent.com/cmrt2/test-task/master/restaurants.json',
       restaurant: 'https://raw.githubusercontent.com/cmrt2/test-task/master/restaurants.json'
     }
   };
 
-  var REQUEST_TIMEOUT = 10000; // 10s
+  let REQUEST_TIMEOUT = 10000; // 10s
 
-  var ResponseCodes = {
+  const ResponseCodes = {
     OK: 200
   };
 
-  var createRequest = function (onLoad, onError) {
-    var xhr = new XMLHttpRequest();
+  let createRequest = function (onLoad, onError) {
+    let xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
 
     xhr.addEventListener('load', function () {
@@ -39,14 +39,14 @@
     return xhr;
   };
 
-  var loadRestaurants = function (onLoad, onError) {
-    var xhr = createRequest(onLoad, onError);
+  let loadRestaurants = function (onLoad, onError) {
+    let xhr = createRequest(onLoad, onError);
     xhr.open('GET', UrlData.LOAD.restaurants);
     xhr.send();
   };
 
-  var loadRestaurant = function (onLoad, onError) {
-    var xhr = createRequest(onLoad, onError);
+  let loadRestaurant = function (onLoad, onError) {
+    let xhr = createRequest(onLoad, onError);
     xhr.open('GET', UrlData.LOAD.restaurant);
     xhr.send();
   };
