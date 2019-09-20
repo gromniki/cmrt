@@ -1,0 +1,67 @@
+.no-margin {
+  margin: 0;
+}
+
+.no-bg {
+  background: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  font-size: 14px;
+  color: #8f8f8f;
+}
+
+.align-center {
+  margin: 0 auto;
+}
+
+.vertical-align {
+  align-items: center;
+}
+
+.vertical-align-end {
+  align-items: flex-end;
+}
+
+.flex-align-center {
+  justify-content: center;
+}
+
+.flex-align-left {
+  justify-content: flex-start;
+}
+
+.baseline {
+  align-items: baseline;
+}
+
+.show {
+  display: block;
+  animation-name: bounce;
+  animation-duration: 0.6s;
+}
+
+.show-left {
+  display: block;
+  animation-name: slideLeft;
+  animation-duration: 0.6s;
+}
+
+.show-down {
+  display: block;
+  animation-name: slideDown;
+  animation-duration: 0.6s;
+}
+
+.hide {
+  animation-name: slideUp;
+  animation-duration: 0.6s;
+}
+
+.error {
+  animation: shake 0.6s;
+}

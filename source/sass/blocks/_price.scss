@@ -1,0 +1,38 @@
+.price {
+  padding: 50px 0;
+  
+  @media (max-width: $mobile-width) {
+    padding: 20px 0;
+  }
+  
+  &__wrapper {
+    @media (max-width: $mobile-width) {
+      padding: 0;
+    }
+  }
+  
+  &__table-margin {
+    margin-top: 50px!important;
+  }
+  
+  &__ul {
+    max-width: 700px;
+    margin: 20px auto;
+  }
+  
+  &__title {
+    text-align: center;
+  }
+  
+  &__info {
+    display: block;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 16px;
+    text-align: center;
+  }
+  
+  &__center {
+    text-align: center;
+  }
+}

@@ -1,0 +1,113 @@
+.trade {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+
+  &__select,
+  &__input {
+    min-width: 200px;
+    padding: 14px 15px;
+    margin-right: 40px;
+    color: $neutral-regular;
+    border: 1px solid $neutral-primary;
+    border-radius: 6px;
+    
+    @media (max-width: $mobile-width) {
+      width: 100%;
+      padding: 9px 15px;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      border-color: $success-color;
+    }
+  }
+  
+  &__select {
+    @media (max-width: $mobile-width) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__option {
+    position: relative;
+    
+    @media (max-width: $mobile-width) {
+      width: 100%;
+    }
+
+    label {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      color: $neutral-regular;
+      transform: translate(0, -50%);
+      transition-duration: 0.2s;
+    }
+  }
+
+  &__input {
+    max-width: 200px;
+    padding: 15px;
+    
+    @media (max-width: $mobile-width) {
+      max-width: none;
+      width: 100%;
+      padding: 11px 15px;
+    }
+
+    &:focus {
+      + label {
+        top: -10px;
+        font-size: 11px;
+        line-height: 1;
+        color: $default-secondary;
+      }
+    }
+  }
+  
+  &__btn {
+    @media (max-width: $mobile-width) {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+
+  b {
+    margin-right: 35px;
+    font-size: 24px;
+    line-height: 1.17;
+    
+    @media (max-width: $phablet-width) {
+      margin-bottom: 15px;
+    }
+    
+    @media (max-width: $mobile-width) {
+      margin-right: 0;
+      font-size: 21px;
+    }
+  }
+
+  &--calc {
+    justify-content: flex-start;
+    margin-top: 20px;
+
+    .trade__select,
+    .trade__input {
+      height: 50px;
+      margin-right: 20px;
+      
+      @media (max-width: $mobile-width) {
+        height: 40px;
+        margin-right: 0;
+      }
+      
+      @media (max-width: $phablet-width) {
+        
+      }
+    }
+  }
+}

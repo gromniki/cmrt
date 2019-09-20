@@ -1,0 +1,70 @@
+// Font
+$font: 'Montserrat', Helvetica, Arial, sans-serif;
+
+// Size
+$mainFontColor: #000000;
+$mainFontSize: 16px;
+$mainFontWeight: 400;
+$mainLineHeight: 1.75;
+
+// Main color
+$default-color: #ffffff;
+$default-secondary: #f2f2f2;
+$default-third: #ececec;
+$primary-color: #364ae3;
+$primary-secondary: #162592;
+$primary-third: #1d30bc;
+$success-color: #68b738;
+$danger-color: #ff6575;
+$danger-secondary: #e84758;
+$danger-third: #da4252;
+$warning-color: #f5831f;
+$light-color: #999999;
+$purple-color: #8854d0;
+$logo-blue: #008bb8;
+$logo-red: #ef3b28;
+
+// Neutral Color
+$neutral-primary: #303133;
+$neutral-regular: #5d5d5d;
+$neutral-secondary: #909399;
+$neutral-third: #535353;
+$neutral-fourth: #ababab;
+$neutral-placeholder: #9a9a9a;
+
+// Border Color
+$border-base: #dcdfe6;
+$border-dark: #c5c5c5;
+$border-light: #e4e7ed;
+$border-lighter: #ebeef5;
+$border-lightex: #f2f6fc;
+
+$mobile-width: 767px;
+$phablet-width: 1023px;
+$tablet-width: 1279px;
+$desktop-width: 1365px;
+$mobile-width-only: 768px;
+$tablet-width-only: 1024px;
+$desktop-width-only: 1280px;
+//$tablet-width-only: 1299px;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+/**
+@media (max-width: $mobile-width) {}
+@media (min-width: $mobile-width-only) and (max-width: $phablet-width) {}
+@media (min-width: $tablet-width-only) and (max-width: $tablet-width) {}
+@media (min-width: $desktop-width-only) and (max-width: $desktop-width) {}
+@media (max-width: $phablet-width) {}
+@media (max-width: $tablet-width) {}
+@media (max-width: $desktop-width) {}
+
+Пример подключения фона с ретиной:
+.banner {
+  background: url("../img/gift-photo-mobile@1x.jpg") no-repeat center / 100%;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background: url("../img/gift-photo-mobile@2x.jpg") no-repeat center / 100%;
+  }
+}
+ */

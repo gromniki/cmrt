@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /404
+Disallow: /*?
+Sitemap: http://domen.ru/sitemap.xml
+Host: domen.ru

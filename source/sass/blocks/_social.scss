@@ -1,0 +1,44 @@
+.social {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin-right: 13px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: $default-color;
+    border-radius: 50%;
+    transition-duration: 0.15s;
+    opacity: 0.5;
+    cursor: pointer;
+
+    svg {
+      fill: $primary-color;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      opacity: 1;
+
+      svg {
+        fill: $danger-secondary;
+      }
+    }
+  }
+}

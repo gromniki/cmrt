@@ -1,0 +1,174 @@
+/*.svg__logo {
+  use {
+    transform: rotate(360deg);
+  }
+
+  &:hover {
+    svg path {
+      transform: inherit;
+    }
+  }
+}*/
+
+
+
+.main-header {
+  position: relative;
+  background-color: $default-color;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    @media (max-width: $mobile-width) {
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+    margin: 10px 20px 0 0;
+    
+    @media (max-width: $tablet-width) {
+      margin: 10px 10px 0 0;
+    }
+
+    &:hover {
+      svg path {
+        fill: $success-color;
+        transform: inherit;
+      }
+    }
+  }
+
+  &__phone {
+    margin-right: 20px;
+    
+    &--first {
+      margin-left: auto;
+    }
+    
+    @media (max-width: $mobile-width) {
+      display: none;
+    }
+  }
+
+  &__popup {
+    margin-right: 60px;
+    
+    @media (max-width: $tablet-width) {
+      margin-right: 20px;
+    }
+    
+    @media (max-width: $mobile-width) {
+      display: none;
+    }
+  }
+
+  &__email {
+    margin-right: 60px;
+    
+    @media (max-width: $tablet-width) {
+      margin-right: 20px;
+    }
+    
+    @media (max-width: $phablet-width) {
+      display: none;
+    }
+  }
+
+  &__address {
+    margin: 0 40px 0 0;
+    
+    @media (max-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  &__show-search {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background-color: $default-secondary;
+    
+    @media (max-width: $phablet-width) {
+      width: 60px;
+      height: 60px;
+    }
+
+    svg {
+      margin: auto;
+      
+      @media (max-width: $phablet-width) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+
+      svg {
+        fill: $primary-color;
+      }
+    }
+
+    &--active {
+      background-color: $primary-color;
+
+      svg {
+        fill: $default-color;
+      }
+
+      &:hover {
+        svg {
+          fill: $default-color;
+        }
+      }
+
+      /*&:focus {
+        background-color: $primary-secondary;
+      }*/
+    }
+  }
+}
+
+.svg__logo:hover .svg-logo-2,
+.svg__logo:hover .svg-logo-3 {
+  transform: rotate(360deg);
+}
+
+.svg-logo-1 {
+  fill: $warning-color;
+  /*fill: #f5831f;*/
+}
+
+.svg-logo-2 {
+  fill: $logo-blue;
+}
+
+.svg-logo-2,
+.svg-logo-3 {
+  transform-origin: 62.5% 43%;
+  transition-duration: 1s;
+}
+
+.svg-logo-3 {
+  fill: $logo-red;
+}
+
+
+.svg__logo {
+  transform: rotate(360deg);
+  
+  @media (max-width: $phablet-width) {
+    width: 70px;
+  }
+
+  &:hover {
+    .svg-logo-2 {
+      transform: inherit;
+    }
+  }
+}

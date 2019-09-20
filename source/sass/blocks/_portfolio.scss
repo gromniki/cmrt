@@ -1,0 +1,46 @@
+.portfolio-grid {
+  margin: 50px auto;
+  
+  &__item {
+    float: left;
+    border-bottom: 0!important;
+    
+    img {
+      display: block;
+      max-width: 100%;
+      width: 310px;
+      height: 205px;
+      transition: all 0.3s ease-in-out;
+      border-radius: 0!important;
+      
+      @media (max-width: 629px) {
+        width: 310px;
+        height: 205px;
+      }
+    }
+    
+    &:nth-of-type(3n+1) img {
+      width: 620px;
+      height: 410px;
+      
+      @media (max-width: 950px) and (min-width: 630px){
+        width: 620px;
+        height: 410px;
+      }
+      
+      @media (max-width: 629px) {
+        width: 310px;
+        height: 205px;
+      }
+    }
+    
+    @media (max-width: 1255px) and (min-width: 951px) {
+      &:nth-of-type(2n+2) img {
+        width: 620px;
+        height: 410px;
+      }
+    }
+    
+  }
+}
+

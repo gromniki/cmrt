@@ -1,0 +1,56 @@
+.fields {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__option {
+    position: relative;
+    margin: 0 20px 10px 0;
+    
+    @media (max-width: $mobile-width) {
+      width: 100%;
+      margin: 0 0 25px 0;
+    }
+
+    label {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      font-size: 15px;
+      color: $neutral-placeholder;
+      transform: translate(0, -50%);
+      transition-duration: 0.2s;
+    }
+  }
+
+  &__input {
+    max-width: 200px;
+    padding: 15px;
+    color: $neutral-primary;
+    border: 1px solid $default-color;
+    border-radius: 6px;
+    
+    @media (max-width: $mobile-width) {
+      max-width: none;
+      width: 100%;
+      padding: 11px 15px;
+    }
+
+    &:hover {
+      border: 1px solid $success-color;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.fields__input:focus + label,
+.fields__label.fields__label--active {
+  top: -10px;
+  font-size: 11px;
+  line-height: 1;
+  color: $default-secondary;
+}

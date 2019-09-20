@@ -1,0 +1,160 @@
+.rubricator {
+  padding: 50px 0;
+
+  &__title {
+    margin: 0 0 20px;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 0 20px;
+    list-style: none;
+    
+    @media (max-width: $tablet-width) {
+      justify-content: center;
+    }
+
+    figure {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 22.2%;
+    margin: 30px 1.4%;
+    padding-bottom: 20px;
+    color: $mainFontColor;
+    background-color: $default-color;
+    border-radius: 6px;
+    overflow: hidden;
+    transition-duration: 0.15s;
+    
+    @media (max-width: $tablet-width) {
+      width: 30.5%;
+      max-width: 320px;
+    }
+    
+    @media (max-width: $phablet-width) {
+      width: 48.5%; 
+    }
+    
+    @media (max-width: $mobile-width) {
+      width: 100%;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 2px 6px 0 rgba(255, 101, 117, 0.3);
+      outline: none;
+
+      p {
+        color: $danger-color;
+      }
+    }
+
+    &:active {
+      box-shadow: 0 2px 3px 0 rgba(255, 101, 117, 0.2);
+
+      p {
+        color: $danger-third;
+      }
+    }
+  }
+
+  img {
+    height: 200px;
+/*    width: 320px;
+    height: 200px;*/
+  }
+
+  p,
+  small,
+  b {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  p {
+    &:last-of-type {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__date {
+    margin-top: auto;
+  }
+
+  small {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 1.34;
+    color: $neutral-secondary;
+  }
+
+  b {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+
+  &--big {
+    .rubricator__item {
+      display: block;
+      min-height: 520px;
+      
+      @media (max-width: $tablet-width) {
+        min-height: 490px;
+      }
+      
+      @media (max-width: $phablet-width) {
+        min-height: 420px;
+      }
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      min-height: 500px;
+      
+      @media (max-width: $tablet-width) {
+        min-height: 470px;
+      }
+      
+      @media (max-width: $phablet-width) {
+        min-height: 400px;
+      }
+    }
+    
+    img {
+      height: auto;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+    
+    small {
+      margin-top: auto;
+      margin-bottom: 25px;
+    }
+
+    b {
+      
+    }
+  }
+  
+  &__btn {
+    &-wrapper {
+      max-width: 1480px;
+      margin: 0 auto;
+      padding: 20px 40px;
+      text-align: center;
+    }
+  }
+}

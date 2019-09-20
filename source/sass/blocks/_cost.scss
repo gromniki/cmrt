@@ -1,0 +1,63 @@
+.cost {
+  padding: 90px 0;
+  font-weight: normal;
+
+  h2 {
+    margin: 0 0 35px;
+    font-size: 24px;
+    font-weight: inherit;
+    line-height: 1.42;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: list;
+  }
+
+  &__item {
+    position: relative;
+    padding: 0 0 30px 80px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      background-color: $success-color;
+    }
+
+    &::before {
+      content: "" counter(list);
+      counter-increment: list;
+      position: absolute;
+      left: 0;
+      z-index: 2;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      line-height: 50px;
+      text-align: center;
+      color: $default-color;
+      border-radius: 50%;
+    }
+
+    &::after {
+      left: 24px;
+      z-index: 1;
+      width: 3px;
+      height: 100%;
+    }
+
+    &:last-of-type {
+      &::after {
+        background-color: transparent;
+      }
+    }
+  }
+
+  b {
+    display: block;
+  }
+}

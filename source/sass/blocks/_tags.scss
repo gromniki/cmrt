@@ -1,0 +1,50 @@
+.tags {
+  font-size: 12px;
+  line-height: 1;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    margin: 0 10px 10px 0;
+    padding: 0;
+
+    &::before {
+      background-color: transparent;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 8px 10px;
+    color: $mainFontColor;
+    border: 1px solid $warning-color;
+    border-radius: 8px;
+
+    &:hover,
+    &:focus {
+      color: $default-color;
+      background-color: $warning-color;
+      outline: none;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &--dark-bg {
+    a {
+      color: $default-secondary;
+    }
+  }
+}

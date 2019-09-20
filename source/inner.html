@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>dev</title>
+  <meta name="description" content="SEO описание страницы">
+  <meta name="keywords" content="список ключевых слов">
+  //= templates/head.html
+</head>
+
+<body>
+//= templates/main-menu.html
+
+<main class="page-main">
+  <section class="top  top--narrowest">
+    <div class="container  container--narrowest">
+      <div class="breadcrumbs  breadcrumbs--align">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__main"><a href="index.html">Главная</a></li>
+          <li><a href="/lasercut">Лазерная резка</a></li>
+          <li class="breadcrumbs__current">Фанеры</li>
+        </ul>
+      </div>
+
+      <div class="top__wrapper">
+        <h1>Технология лазерной обработки меха</h1>
+        <p>Одним из направлений, освоенных совсем недавно, стала лазерная обработка меховых изделий. Безусловно,
+          качественный мех красив сам по себе, и даже самые простые по покрою шубы из него смотрятся стильно и
+          утонченно.</p>
+
+        <small>Гарантия • Цена до оказания услуги • Организация доставки • Крупный станковый парк</small>
+
+        <form class="trade  trade--calc" action="https://echo.htmlacademy.ru" method="post">
+          <select class="trade__select" name="material">
+            <option>Материал</option>
+            <option value="Фанера">Фанера</option>
+            <option value="Дерево">Дерево</option>
+            <option value="Картон">Картон</option>
+            <option value="Кожа">Кожа</option>
+            <option value="Оргстекло">Оргстекло</option>
+            <option value="Пластик">Пластик</option>
+            <option value="Мех">Мех</option>
+          </select>
+
+          <div class="trade__option">
+            <input class="trade__input  input-error" id="length" type="number" name="length" step="any" min="1">
+            <label for="length">Длина реза, м</label>
+          </div>
+          <button class="btn  btn--red  trade__btn" type="submit">Узнать стоимость</button>
+        </form>
+
+        <div class="tags  tags--dark-bg">
+          <ul class="tags__list">
+            <li class="tags__item"><a href="/">Лазерная резка</a></li>
+            <li class="tags__item"><a href="/">Мех</a></li>
+            <li class="tags__item"><a href="/">Рекомендации</a></li>
+            <li class="tags__item"><a href="/">Лазерная резка</a></li>
+            <li class="tags__item"><a href="/">Мех</a></li>
+            <li class="tags__item"><a href="/">Рекомендации</a></li>
+            <li class="tags__item"><a href="/">Лазерная резка</a></li>
+            <li class="tags__item"><a href="/">Мех</a></li>
+            <li class="tags__item"><a href="/">Рекомендации</a></li>
+            <li class="tags__item"><a href="/">Лазерная резка</a></li>
+            <li class="tags__item"><a href="/">Мех</a></li>
+            <li class="tags__item"><a href="/">Рекомендации</a></li>
+            <li class="tags__item"><a href="/">Лазерная резка</a></li>
+            <li class="tags__item"><a href="/">Мех</a></li>
+            <li class="tags__item"><a href="/">Рекомендации</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content">
+    <div class="container  container--narrowest">
+      <p>Несмотря на то, что режущие свойства лазерного излучения были открыты и исследованы еще в прошлом столетии, его
+        активное использование в различных сферах человеческой жизнедеятельности началось только около десяти лет назад.
+        Причиной тому стали интенсивные разработки, особенно в области станкостроения, нацеленные на удешевление
+        оборудования и расширение модельных линеек лазерных аппаратов.</p>
+      <p>Сегодня устройства, работающие по принципу фокусировки лазерного потока, можно встретить в офтальмологических и
+        стоматологических клиниках, на дерево- и металлообрабатывающих производствах, на предприятиях по выпуску
+        упаковочной тары, в рекламных и ювелирных мастерских, в раскройных цехах по выпуску одежды и обуви и еще во
+        множестве отраслей.</p>
+      <p>Популярность и востребованность лазерных станков объясняется исключительной точностью резки и гравировки,
+        высокой скоростью перемещения луча, простотой в управлении и широким ассортиментом материалов, подходящих для
+        обработки. Кроме того, такое оборудование не требует замены инструмента в ходе рабочего цикла и практически не
+        оставляет отходов при раскрое, поэтому у лазерных резчиков самые высокие показатели экономической
+        эффективности.</p>
+
+      <figure>
+        <img src="/img/temp/zpos_mex1.jpg" width="680" height="286" alt="Картинка с изображением меха">
+        <figcaption>
+          Примеры фигурной стрижки меха с использованием лазерного луча в качестве режущего инструмента. Просто и
+          наглядно.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="container">
+    <section class="feedback">
+      <h2 class="feedback__title">Оставьте заявку для решения вашей задачи</h2>
+      <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="feedback__form--align">
+          <input class="input  feedback__input" type="text" name="imyarek" placeholder="Имя">
+          <input class="input  feedback__input" type="text" name="telefono" placeholder="Телефон">
+          <button class="btn  btn--red  feedback__btn" type="submit">Отправить</button>
+        </div>
+        <small class="feedback__small-text  small-text">Оставляя заявку, вы&nbsp;даете согласие на&nbsp;обработку
+          персональных данных.
+        </small>
+        <input class="no-display" type="text" name="antispamname">
+        <input class="no-display" type="text" name="antispamphone">
+      </form>
+    </section>
+  </div>
+</main>
+
+//= templates/footer.html
+
+</body>
+</html>

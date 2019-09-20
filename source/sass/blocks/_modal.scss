@@ -1,0 +1,173 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  display: none;
+  background-color: $default-color;
+  box-shadow: 0 20px 40px 0 rgba(0, 1, 1, 0.75);
+  transform: translate(-50%, -50%);
+  
+  @media (max-width: $mobile-width) {
+    top: 0;
+    transform: translate(-50%, 0%);
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 990;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .index-column {
+    @media (min-width: $mobile-width-only) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item {
+    @media (max-width: $mobile-width) {
+      width: 100%;
+    }
+    
+    &--input {
+      &:first-of-type {
+        margin-right: 20px;
+        
+        @media (max-width: $mobile-width) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &--textarea {
+      padding: 20px 70px 30px;
+      
+      @media (max-width: $mobile-width) {
+        padding: 20px 30px 30px;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+    }
+  }
+
+  label {
+    display: block;
+    padding-bottom: 8px;
+    line-height: 1;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid $border-base;
+    border-radius: 3px;
+
+    &::placeholder {
+      color: $border-dark;
+    }
+
+    &:hover {
+      border: 2px solid #aaaaaa;
+    }
+
+    &:focus {
+      border: 2px solid $danger-color;
+      outline: none;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+
+    &-wrapper {
+      padding: 40px 70px;
+      background-color: $default-secondary;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 17px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    
+    @media (max-width: $mobile-width) {
+      top: 13px;
+      right: 20px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: -1px;
+      width: 27px;
+      height: 4px;
+      background-color: $danger-color;
+      border-radius: 1px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__feedback {
+    padding-top: 50px;
+    border-top: 10px solid $danger-color;
+
+    .index-column {
+      padding: 0 70px;
+      
+      @media (max-width: $mobile-width) {
+        padding: 0 30px;
+      }
+    }
+
+    input {
+      width: 240px;
+      
+      @media (max-width: $mobile-width) {
+        width: 100%;
+      }
+    }
+  }
+
+  &-show {
+    display: block;
+    animation-name: bounceModal;
+    animation-duration: 0.6s;
+  }
+
+  &-overlay {
+    display: block;
+  }
+
+  &-hide {
+    animation-name: slideUp;
+    animation-duration: 0.6s;
+  }
+
+  &-error {
+    animation: shake 0.6s;
+  }
+}

@@ -1,0 +1,186 @@
+.display {
+  padding: 50px 0;
+
+  &__title {
+    margin: 0 0 30px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    padding-bottom: 40px;
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+
+    > img {
+      margin-right: 40px;
+    }
+
+    p {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__image {
+    &-wrapper {
+      width: 120px;
+      margin-right: 40px;
+      border-bottom: none;
+    }
+  }
+
+  img {
+    align-self: flex-start;
+    border-radius: 6px;
+    transition-duration: 0.2s;
+  }
+
+  span {
+    display: block;
+  }
+
+  a {
+    &:hover,
+    &:focus {
+      outline: none;
+
+      img {
+        transform: scale(1.01);
+      }
+    }
+  }
+
+  &__text {
+    max-width: 520px;
+
+    &--flex {
+      display: flex;
+      flex-direction: column;
+    }
+
+    + img {
+      margin-right: 0;
+    }
+
+    a[href] {
+      font-weight: 700;
+      color: $mainFontColor;
+
+      &:hover,
+      &:focus {
+        color: $danger-color;
+        outline: none;
+      }
+
+      &:active {
+        color: $danger-third;
+      }
+    }
+  }
+
+  &__code {
+    margin: auto 0 5px;
+    font-size: 12px;
+    line-height: 1.34;
+    color: $neutral-secondary;
+  }
+
+  &__price {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.17;
+  }
+  
+  &__btn {
+    display: block;
+    margin: 50px auto 20px;
+  }
+
+  /* Средняя и полная ширина контейнера */
+  &--middle,
+  &--wide {
+    .display__image {
+      &-wrapper {
+        width: 440px;
+        margin: 0;
+      }
+    }
+
+    .display__text {
+      max-width: 680px;
+
+      a[href] {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+
+        &:hover,
+        &:focus {
+          border-color: $danger-color;
+        }
+
+        &:active {
+          border-color: $danger-third;
+        }
+      }
+    }
+  }
+
+  /* Средняя ширина контейнера */
+  &--middle {
+    background-color: $default-third;
+
+    .display__item {
+      padding-bottom: 60px;
+
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+    }
+
+    .display__image {
+      &-wrapper {
+        margin-right: 40px;
+      }
+    }
+
+    a,
+    b {
+      font-size: 30px;
+      line-height: 1.23;
+    }
+  }
+
+  /* Полная ширина контейнера */
+  &--wide {
+    .display__item {
+      justify-content: space-between;
+      padding-bottom: 120px;
+
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+    }
+
+    a,
+    b {
+      font-size: 24px;
+      line-height: 1.67;
+    }
+
+    a {
+      line-height: 1.3;
+    }
+
+    .display__text {
+      margin-right: 40px;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<div style="display:none">
+  <include src="build/img/sprite.svg"></include>
+</div>
+
+<header class="main-header">
+  <div class="container">
+    <div class="main-header__wrapper">
+      <nav class="main-nav  main-nav--closed  js-main-nav">
+        <button class="main-nav__toggle  js-show-menu" type="button">
+          <span>Открыть меню</span>
+          <p class="main-nav__toggle-text">Закрыть</p>
+        </button>
+
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item  sub-nav-1">
+              <a href="catalog/">Продукция</a>
+            </li>
+            <li class="main-nav__item  sub-nav-1"><a href="kontakti">Контакты</a></li>
+            <li class="main-nav__item  sub-nav-1"><a href="o-kompanii">О компании</a></li>
+            <li class="main-nav__item  sub-nav-1"><a href="/inner.html">Внутренние</a></li>
+          </ul>
+        </div>
+      </nav>
+      <a class="main-header__logo" href="/"><!-- Если это главная, то убираем атрибут href -->
+        <svg class="svg__logo" width="100" height="32">
+          <use xlink:href="#icon-logo-zpos"></use>
+        </svg>
+      </a>
+      <a class="contacts  main-header__phone" href="tel:88123099794">8 812 309-97-94</a>
+      <a class="contacts  contacts--normal  main-header__popup  js-btn-show-modal-feedback" href="/">Перезвоните мне</a>
+      <a class="contacts  main-header__email" href="mailto:info@zpos.ru">info@zpos.ru</a>
+      <p class="contacts  contacts--text  main-header__address">
+        Санкт-Петербург, ул. Атаманская 3/6
+      </p>
+
+      <a class="main-header__show-search  js-show-search" href="/search.html">
+        <span class="visually-hidden">Поиск</span>
+        <svg class="main-header__search-icon" width="45" height="45" role="img" aria-labelledby="heading"
+             focusable="false">
+          <title id="heading">Поищем по сайту</title>
+          <use xlink:href="#icon-search"></use>
+        </svg>
+      </a>
+      <div class="main-header__search  search  js-search">
+        <h2 class="search__title">Поиск по&nbsp;сайту</h2>
+        <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
+          <input class="input  search__input" type="search" name="search" placeholder="Введите запрос">
+          <button class="btn  btn--red  search__btn" type="submit">Найти</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
