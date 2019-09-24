@@ -7,25 +7,77 @@
   console.log(shopTemplate);
 
   // функция отрисовки и изменения характеристик магазина
-  let renderShop = function (shop) {
+  let renderShop = (shop) => {
     let shopElement = shopTemplate.cloneNode(true);
     let img = shopElement.querySelector('img');
     let title = shopElement.querySelector('h3');
 
-    img.setAttribute('src', shop.images);
-    img.setAttribute('alt', shop.name);
+    // img.setAttribute('src', shop.images);
+    // img.setAttribute('alt', shop.name);
 
-    title.textContent = 'Test';
+    title.textContent = shop;
 
     return shopElement;
   };
 
-  let fragment = document.createDocumentFragment();
+
+  let displayShops = () => {
+    let fragment = document.createDocumentFragment();
 
 
-  // let arrayShops = renderShop(window.backend.loadRestaurants());
+    // let arr = window.backend.loadRestaurants;
+    //
+    // arr.forEach(function (shop) {
+    //   fragment.append(renderShop(shop));
+    // });
+    // fragment.append(window.backend.loadRestaurants(renderShop, 'errorTest'));
 
-  shopList.append(fragment);
+    shopList.append(fragment);
+  };
+
+  displayShops();
+
+
+
+  console.log(window.backend.loadRestaurants('ttttttt', 'testError'));
+
+
+  // var renderPins = function () {
+  //   var fragment = document.createDocumentFragment();
+  //   var filteredPins = filterByHousingFeature(); // Фильтруем все пины
+  //   var pins = getRenderedPins(filteredPins, PINS_MAX_COUNT); // берем первые 5
+  //
+  //   pins.forEach(function (pin) {
+  //     fragment.appendChild(renderPin(pin));
+  //   });
+  //
+  //   clearPins();
+  //   window.card.removeCard();
+  //   similarListElement.appendChild(fragment);
+  // };
+
+
+
+
+  // let shopElement = shopTemplate.cloneNode(true);
+  // let img = shopElement.querySelector('img');
+  // let title = shopElement.querySelector('h3');
+  //
+  // img.setAttribute('src', '/test-src');
+  // img.setAttribute('alt', 'Такой атрибут');
+  //
+  // title.textContent = 'Test';
+  //
+  // let fragment = document.createDocumentFragment();
+  //
+  // fragment.append(shopElement);
+  //
+  // shopList.append(fragment);
+
+  // shopList.append(shopElement);
+
+
+
 
   // функция отрисовки магазинов на странице
   // let renderShops = function () {

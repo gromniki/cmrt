@@ -21,6 +21,7 @@
     xhr.addEventListener('load', function () {
       if (xhr.status === ResponseCodes.OK) {
         onLoad(xhr.response);
+        console.log(xhr.response);
       } else {
         onError('Cтатус ответа: ' + xhr.status + ' ' + xhr.statusText);
       }

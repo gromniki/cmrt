@@ -117,9 +117,9 @@ gulp.task('js', function () {
     }))
     .pipe(plumber())
     .pipe(sourcemap.init())
-    // .pipe(concat('main.js'))
-    // .pipe(uglify())
-    // .pipe(rename({suffix: '.min'}))
+    .pipe(concat('main.js'))
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
     .pipe(sourcemap.write('.'))
     .pipe(gulp.dest(path.build.js))
     .pipe(server.stream());
