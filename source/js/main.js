@@ -8,7 +8,6 @@
 
   // функция отрисовки и изменения характеристик магазина
   let renderShop = (shop) => {
-
     let shopElement = shopTemplate.cloneNode(true);
     let img = shopElement.querySelector('img'); // картинка
     let title = shopElement.querySelector('h3'); // заголовок
@@ -35,7 +34,7 @@
     return shopElement;
   };
 
-
+  // функция вывода каталога магазинов на страницу
   let displayShops = (shops) => {
     console.log(shops);
     let fragment = document.createDocumentFragment();
