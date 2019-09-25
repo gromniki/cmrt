@@ -13,20 +13,29 @@
 
 <main class="page-main">
   <section class="catalog">
-    <h2 class="catalog__title">Каталог магазинов</h2>
-    <div class="catalog__list">
-      <!-- Вставляется разметка из тега template -->
-    </div>
+    <h2 class="catalog__title  visually-hidden">Каталог магазинов</h2>
+    <div class="catalog__list"></div>
   </section>
 </main>
 
 <template class="shop" id="shop">
-  <a class="catalog__item" href="/">
-    <img src="/img/temp/stub-320-33.jpg" width="320" height="320" alt="">
-    <h3>Макдоналдс - <span class="catalog__item-location">Газетный</span></h3>
-    <p>РР</p>
-    <small>25 - 35 Min</small>
-  </a>
+  <div class="catalog__item" id="js-catalog-item">
+    <a class="catalog__item-img" href="/">
+      <img src="/img/temp/stub-320-33.jpg" srcset="/img/temp/stub-320-33.jpg 2x" width="308" height="308" alt="Аппетитный обед в Макдоналдс">
+    </a>
+    <a class="catalog__item-title" href="/">
+      <h3>Макдоналдс</h3> -
+      <span class="catalog__item-location">Газетный</span>
+    </a>
+    <p class="catalog__item-text">
+      <span class="catalog__item-price">РР</span> •
+      <span class="catalog__item-kitchen">Бургеры</span>
+    </p>
+    <p class="catalog__item-time">
+      <span class="catalog__item-time-min">25</span> -
+      <span class="catalog__item-time-max">35</span> Min
+    </p>
+  </div>
 </template>
 
 //= templates/footer.html

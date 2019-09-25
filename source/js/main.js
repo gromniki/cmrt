@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  const shopTemplate = document.querySelector('#shop').content.querySelector('.catalog__item');
+  const shopTemplate = document.querySelector('#shop').content.querySelector('#js-catalog-item');
   const shopList = document.querySelector('.catalog__list');
 
   console.log(shopTemplate);
@@ -10,13 +10,27 @@
   let renderShop = (shop) => {
 
     let shopElement = shopTemplate.cloneNode(true);
-    let img = shopElement.querySelector('img');
-    let title = shopElement.querySelector('h3');
+    let img = shopElement.querySelector('img'); // картинка
+    let title = shopElement.querySelector('h3'); // заголовок
+    let location = shopElement.querySelector('.catalog__item-location'); // местоположение
+    let price = shopElement.querySelector('.catalog__item-price'); // цена
+    let kitchen = shopElement.querySelector('.catalog__item-kitchen'); // кухня
+    let timeMin = shopElement.querySelector('.catalog__item-time-min'); // минимальное время
+    let timeMax = shopElement.querySelector('.catalog__item-time-max'); // максимальное время
 
-    // img.setAttribute('src', shop.images);
-    // img.setAttribute('alt', shop.name);
+    img.setAttribute('src', shop.images.normal);
+    img.setAttribute('srcset', shop.images.retina + ' 2x');
+    img.setAttribute('alt', shop.name);
 
     title.textContent = shop.name;
+    location.textContent = shop.location;
+
+    console.log(shop.averagePrice);
+    price.textContent = 'PPP';
+
+    kitchen.textContent = shop.kitchens.join(' • ');
+    timeMin.textContent = shop.timeOfDelivery[0];
+    timeMax.textContent = shop.timeOfDelivery[1];
 
     return shopElement;
   };
