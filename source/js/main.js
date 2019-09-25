@@ -8,6 +8,7 @@
 
   // функция отрисовки и изменения характеристик магазина
   let renderShop = (shop) => {
+    debugger;
     let shopElement = shopTemplate.cloneNode(true);
     let img = shopElement.querySelector('img');
     let title = shopElement.querySelector('h3');

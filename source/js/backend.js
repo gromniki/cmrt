@@ -41,6 +41,7 @@
   };
 
   let loadRestaurants = function (onLoad, onError) {
+    debugger;
     let xhr = createRequest(onLoad, onError);
     xhr.open('GET', UrlData.LOAD.restaurants);
     xhr.send();
