@@ -21,7 +21,6 @@
     xhr.addEventListener('load', function () {
       if (xhr.status === ResponseCodes.OK) {
         onLoad(xhr.response);
-        console.log(xhr.response);
       } else {
         onError('Cтатус ответа: ' + xhr.status + ' ' + xhr.statusText);
       }
@@ -41,7 +40,6 @@
   };
 
   let loadRestaurants = function (onLoad, onError) {
-    debugger;
     let xhr = createRequest(onLoad, onError);
     xhr.open('GET', UrlData.LOAD.restaurants);
     xhr.send();
