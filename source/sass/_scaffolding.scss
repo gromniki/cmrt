@@ -119,8 +119,8 @@ input[type="radio"].visually-hidden {
 
 .btn {
   display: inline-block;
-  min-width: 200px;
-  padding: 10px 25px;
+  min-width: 80px;
+  padding: 7px 14px;
   font: inherit;
   font-weight: 700;
   text-align: center;
@@ -128,7 +128,7 @@ input[type="radio"].visually-hidden {
   vertical-align: top;
   background-color: transparent;
   border: 1px solid $mainFontColor;
-  border-radius: 6px;
+  border-radius: 3px;
   cursor: pointer;
   
   @media (max-width: $mobile-width) {

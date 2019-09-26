@@ -22,7 +22,7 @@
     img.setAttribute('alt', shop.name);
 
     title.textContent = shop.name;
-    location.textContent = shop.location;
+    location.textContent = ' — ' + shop.location;
 
     for (let i = 1; i <= shop.averagePrice; i++) {
       price.insertAdjacentHTML('afterbegin', '₽');

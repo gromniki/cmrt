@@ -1,0 +1,17 @@
+.user {
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @include list-reset();
+  }
+
+  &__item {
+    margin-right: 16px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+}

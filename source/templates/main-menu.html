@@ -3,29 +3,36 @@
 </div>
 
 <header class="main-header">
-  <div class="main-header__wrapper  container">
+  <div class="main-header__wrapper">
     <div class="main-header__top">
-      <a class="main-header__logo">
-        <svg class="svg__logo" width="121" height="13">
-          <use xlink:href="#icon-logo-cmrt"></use>
-        </svg>
-      </a>
+      <div class="main-header__top-wrapper  container">
+        <a class="main-header__logo">
+          <svg class="svg__logo" width="121" height="13">
+            <use xlink:href="#icon-logo-cmrt"></use>
+          </svg>
+        </a>
 
-
-      
-      
-      
-      
-      <div class="main-header__search  search  js__search">
-        <h2 class="search__title">Поиск по&nbsp;сайту</h2>
-        <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
-          <input class="input  search__input" type="search" name="search" placeholder="Введите запрос">
-          <button class="btn  btn--red  search__btn" type="submit">Найти</button>
-        </form>
+        <div class="user">
+          <ul class="user__list">
+            <li class="user__item">
+              <a class="btn  user__btn-sign" href="/signin.html">Sign In</a>
+            </li>
+            <li class="user__item">
+              <a class="btn  user__btn-register" href="/reg.html">Register</a>
+            </li>
+            <li class="user__item">
+              <a class="user__btn-cart" href="/cart.html">
+                <svg class="user__svg-cart" width="19" height="22">
+                  <use xlink:href="#icon-cart"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
-    <form class="main-header__search" action="https://echo.htmlacademy.ru" method="get">
+    <form class="main-header__search  container" action="https://echo.htmlacademy.ru" method="get">
       <input class="main-header__search-input" type="search" name="search" placeholder="Поиск:">
       <button class="main-header__search-btn  hidden" type="submit">
         <span class="visually-hidden">Искать</span>
