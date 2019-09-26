@@ -16,7 +16,6 @@ body {
   font-weight: normal;
   line-height: $mainLineHeight;
   color: $mainFontColor;
-  background-color: $default-secondary;
   
   @media (max-width: $mobile-width) {
     font-size: 14px;

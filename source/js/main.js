@@ -4,9 +4,10 @@
   const shopTemplate = document.querySelector('#shop').content.querySelector('#catalog-item');
   const shopList = document.querySelector('.catalog__list');
 
-  console.log(shopTemplate);
-
-  // функция отрисовки и изменения характеристик магазина
+  /**
+   * @param shop
+   * @returns {Node}
+   */
   let renderShop = (shop) => {
     let shopElement = shopTemplate.cloneNode(true);
     let img = shopElement.querySelector('img'); // картинка
@@ -14,8 +15,7 @@
     let location = shopElement.querySelector('.catalog__item-location'); // местоположение
     let price = shopElement.querySelector('.catalog__item-price'); // цена
     let kitchen = shopElement.querySelector('.catalog__item-kitchen'); // кухня
-    let timeMin = shopElement.querySelector('.catalog__item-time-min'); // минимальное время
-    let timeMax = shopElement.querySelector('.catalog__item-time-max'); // максимальное время
+    let time = shopElement.querySelector('.catalog__item-time'); // время
 
     img.setAttribute('src', shop.images.normal);
     img.setAttribute('srcset', shop.images.retina + ' 2x');
@@ -24,19 +24,20 @@
     title.textContent = shop.name;
     location.textContent = shop.location;
 
-    console.log(shop.averagePrice);
-    price.textContent = 'PPP';
+    for (let i = 1; i <= shop.averagePrice; i++) {
+      price.insertAdjacentHTML('afterbegin', '₽');
+    }
 
     kitchen.textContent = shop.kitchens.join(' • ');
-    timeMin.textContent = shop.timeOfDelivery[0];
-    timeMax.textContent = shop.timeOfDelivery[1];
+    time.textContent = shop.timeOfDelivery.join(' - ') + ' Min';
 
     return shopElement;
   };
 
-  // функция вывода каталога магазинов на страницу
+  /**
+   * @param shops
+   */
   let displayShops = (shops) => {
-    console.log(shops);
     let fragment = document.createDocumentFragment();
 
     shops.forEach(function (shop) {

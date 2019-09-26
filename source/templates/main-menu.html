@@ -3,46 +3,20 @@
 </div>
 
 <header class="main-header">
-  <div class="container">
-    <div class="main-header__wrapper">
-      <nav class="main-nav  main-nav--closed  js-main-nav">
-        <button class="main-nav__toggle  js-show-menu" type="button">
-          <span>Открыть меню</span>
-          <p class="main-nav__toggle-text">Закрыть</p>
-        </button>
-
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item  sub-nav-1">
-              <a href="catalog/">Продукция</a>
-            </li>
-            <li class="main-nav__item  sub-nav-1"><a href="kontakti">Контакты</a></li>
-            <li class="main-nav__item  sub-nav-1"><a href="o-kompanii">О компании</a></li>
-            <li class="main-nav__item  sub-nav-1"><a href="/inner.html">Внутренние</a></li>
-          </ul>
-        </div>
-      </nav>
-      <a class="main-header__logo" href="/"><!-- Если это главная, то убираем атрибут href -->
-        <svg class="svg__logo" width="100" height="32">
-          <use xlink:href="#icon-logo-zpos"></use>
+  <div class="main-header__wrapper  container">
+    <div class="main-header__top">
+      <a class="main-header__logo">
+        <svg class="svg__logo" width="121" height="13">
+          <use xlink:href="#icon-logo-cmrt"></use>
         </svg>
       </a>
-      <a class="contacts  main-header__phone" href="tel:88123099794">8 812 309-97-94</a>
-      <a class="contacts  contacts--normal  main-header__popup  js-btn-show-modal-feedback" href="/">Перезвоните мне</a>
-      <a class="contacts  main-header__email" href="mailto:info@zpos.ru">info@zpos.ru</a>
-      <p class="contacts  contacts--text  main-header__address">
-        Санкт-Петербург, ул. Атаманская 3/6
-      </p>
 
-      <a class="main-header__show-search  js-show-search" href="/search.html">
-        <span class="visually-hidden">Поиск</span>
-        <svg class="main-header__search-icon" width="45" height="45" role="img" aria-labelledby="heading"
-             focusable="false">
-          <title id="heading">Поищем по сайту</title>
-          <use xlink:href="#icon-search"></use>
-        </svg>
-      </a>
-      <div class="main-header__search  search  js-search">
+
+      
+      
+      
+      
+      <div class="main-header__search  search  js__search">
         <h2 class="search__title">Поиск по&nbsp;сайту</h2>
         <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
           <input class="input  search__input" type="search" name="search" placeholder="Введите запрос">
@@ -50,5 +24,17 @@
         </form>
       </div>
     </div>
+
+    <form class="main-header__search" action="https://echo.htmlacademy.ru" method="get">
+      <input class="main-header__search-input" type="search" name="search" placeholder="Поиск:">
+      <button class="main-header__search-btn  hidden" type="submit">
+        <span class="visually-hidden">Искать</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+          <path fill="#ffffff"
+                d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/>
+        </svg>
+      </button>
+    </form>
   </div>
 </header>
+
