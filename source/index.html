@@ -13,13 +13,15 @@
 
 <main class="page-main">
   <section class="catalog">
-    <h2 class="catalog__title  visually-hidden">Каталог магазинов</h2>
-    <div class="catalog__list"></div>
+    <div class="catalog__wrapper  container">
+      <h2 class="catalog__title">Каталог магазинов</h2>
+      <ul class="catalog__list"></ul>
+    </div>
   </section>
 </main>
 
 <template class="shop" id="shop">
-  <div class="catalog__item" id="js-catalog-item">
+  <li class="catalog__item" id="catalog-item">
     <a class="catalog__item-img" href="/">
       <img src="/img/temp/stub-320-33.jpg" srcset="/img/temp/stub-320-33.jpg 2x" width="308" height="308" alt="Аппетитный обед в Макдоналдс">
     </a>
@@ -35,7 +37,7 @@
       <span class="catalog__item-time-min">25</span> -
       <span class="catalog__item-time-max">35</span> Min
     </p>
-  </div>
+  </li>
 </template>
 
 //= templates/footer.html

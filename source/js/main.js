@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  const shopTemplate = document.querySelector('#shop').content.querySelector('#js-catalog-item');
+  const shopTemplate = document.querySelector('#shop').content.querySelector('#catalog-item');
   const shopList = document.querySelector('.catalog__list');
 
   console.log(shopTemplate);
