@@ -128,7 +128,7 @@ input[type="radio"].visually-hidden {
   vertical-align: top;
   background-color: transparent;
   border: 1px solid $mainFontColor;
-  border-radius: 3px;
+  border-radius: 4px;
   cursor: pointer;
   
   @media (max-width: $mobile-width) {

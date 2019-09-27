@@ -9,7 +9,7 @@
    * @returns {Node}
    */
   let renderShop = (shop) => {
-    let shopElement = shopTemplate.cloneNode(true);
+    let shopElement = shopTemplate.cloneNode(true); // клонирую разметку шаблона
     let img = shopElement.querySelector('img'); // картинка
     let title = shopElement.querySelector('h3'); // заголовок
     let location = shopElement.querySelector('.catalog__item-location'); // местоположение
@@ -38,6 +38,7 @@
    * @param shops
    */
   let displayShops = (shops) => {
+    console.log(shops);
     let fragment = document.createDocumentFragment();
 
     shops.forEach(function (shop) {
@@ -48,4 +49,22 @@
   };
 
   window.backend.loadRestaurants(displayShops, 'error');
+
+  /**
+   * @param product
+   */
+  let displayProducts = (product) => {
+    // let fragment = document.createDocumentFragment();
+    let title = document.querySelector('.banner__title');
+    let location = shopElement.querySelector('.banner__location');
+    let price = shopElement.querySelector('.banner__price');
+    let kitchen = shopElement.querySelector('.banner__kitchen');
+    let time = shopElement.querySelector('.banner__time');
+
+    title.textContent = product.name;
+
+    // shopList.append(fragment);
+  };
+
+  window.backend.loadRestaurant(displayProducts, 'error');
 })();

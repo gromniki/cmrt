@@ -14,4 +14,33 @@
     }
   }
 
+  &__btn {
+    padding: 9px 14px;
+    font-size: 13px;
+    border-color: $neutral-secondary;
+
+    &-register {
+      color: $default-color;
+      background-color: $neutral-third;
+      border-color: transparent;
+
+      &:hover,
+      &:focus {
+        border-color: transparent;
+      }
+    }
+
+    &-cart {
+      &:hover,
+      &:focus {
+        opacity: 0.6;
+        outline: none;
+      }
+
+      &:active {
+        opacity: 0.4;
+      }
+    }
+  }
+
 }
