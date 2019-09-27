@@ -25,7 +25,7 @@
     location.textContent = ' — ' + shop.location;
 
     for (let i = 1; i <= shop.averagePrice; i++) {
-      price.insertAdjacentHTML('afterbegin', '₽');
+      price.insertAdjacentHTML('afterbegin', '&#8381');
     }
 
     kitchen.textContent = shop.kitchens.join(' • ');
