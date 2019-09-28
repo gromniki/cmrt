@@ -30,4 +30,11 @@
     line-height: 1.15;
     color: $neutral-regular;
   }
+
+  &__time {
+    padding: 4px 15px;
+    color: $default-color;
+    background-color: $mainFontColor;
+    border-radius: 20px;
+  }
 }
