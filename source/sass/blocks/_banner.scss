@@ -24,8 +24,13 @@
     line-height: 1.16;
   }
 
+  &__text,
+  &__time {
+    display: inline-block;
+    margin: 0;
+  }
+
   &__text {
-    margin-bottom: 0;
     font-size: 14px;
     line-height: 1.15;
     color: $neutral-regular;

@@ -54,16 +54,24 @@
    * @param product
    */
   let displayProducts = (product) => {
+    console.log(product);
     // let fragment = document.createDocumentFragment();
+    let banner = document.querySelector('.banner');
     let title = document.querySelector('.banner__title');
-    let location = shopElement.querySelector('.banner__location');
-    let price = shopElement.querySelector('.banner__price');
-    let kitchen = shopElement.querySelector('.banner__kitchen');
-    let time = shopElement.querySelector('.banner__time');
+    let location = document.querySelector('.banner__location');
+    let price = document.querySelector('.banner__price');
+    let kitchen = document.querySelector('.banner__kitchen');
+    let time = document.querySelector('.banner__time');
 
+    banner.style.background = '';
     title.textContent = product.name;
 
-    // shopList.append(fragment);
+    for (let i = 1; i <= product.averagePrice; i++) {
+      price.insertAdjacentHTML('afterbegin', '&#8381');
+    }
+
+    kitchen.textContent = product.kitchens.join(' • ');
+    time.textContent = product.timeOfDelivery.join(' - ') + ' Min';
   };
 
   window.backend.loadRestaurant(displayProducts, 'error');
