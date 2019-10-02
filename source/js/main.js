@@ -57,13 +57,13 @@
     console.log(product);
     // let fragment = document.createDocumentFragment();
     let banner = document.querySelector('.banner');
-    let title = document.querySelector('.banner__title');
-    let location = document.querySelector('.banner__location');
-    let price = document.querySelector('.banner__price');
-    let kitchen = document.querySelector('.banner__kitchen');
-    let time = document.querySelector('.banner__time');
+    let title = banner.querySelector('.banner__title');
+    let location = banner.querySelector('.banner__location');
+    let price = banner.querySelector('.banner__price');
+    let kitchen = banner.querySelector('.banner__kitchen');
+    let time = banner.querySelector('.banner__time');
 
-    banner.style.background = '';
+    banner.setAttribute('style', 'background: url(" ' + product.images.wideNormal + ' ");');
     title.textContent = product.name;
 
     for (let i = 1; i <= product.averagePrice; i++) {
