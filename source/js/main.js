@@ -63,7 +63,8 @@
     let kitchen = banner.querySelector('.banner__kitchen');
     let time = banner.querySelector('.banner__time');
 
-    banner.setAttribute('style', 'background: url("' + product.images.wideNormal + '") center / cover no-repeat;');
+    banner.setAttribute('style', `background: url("${product.images.wideNormal}") center / cover no-repeat;`);
+    // banner.setAttribute('style', 'background: url("' + product.images.wideNormal + '") center / cover no-repeat;');
     title.textContent = product.name;
 
     for (let i = 1; i <= product.averagePrice; i++) {
