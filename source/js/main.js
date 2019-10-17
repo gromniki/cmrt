@@ -77,4 +77,8 @@
   };
 
   window.backend.loadRestaurant(displayProducts, 'error');
+
+  //
+  const productTemplate = document.querySelector('#product').content.querySelector('#product-item');
+  const productList = document.querySelector('.product__list');
 })();

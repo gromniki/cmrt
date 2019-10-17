@@ -8,14 +8,14 @@
     }
   };
 
-  let REQUEST_TIMEOUT = 10000; // 10s
+  const REQUEST_TIMEOUT = 10000; // 10s
 
   const ResponseCodes = {
     OK: 200
   };
 
-  let createRequest = function (onLoad, onError) {
-    let xhr = new XMLHttpRequest();
+  const createRequest = function (onLoad, onError) {
+    const xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
 
     xhr.addEventListener('load', function () {
@@ -39,14 +39,14 @@
     return xhr;
   };
 
-  let loadRestaurants = function (onLoad, onError) {
-    let xhr = createRequest(onLoad, onError);
+  const loadRestaurants = function (onLoad, onError) {
+    const xhr = createRequest(onLoad, onError);
     xhr.open('GET', UrlData.LOAD.restaurants);
     xhr.send();
   };
 
-  let loadRestaurant = function (onLoad, onError) {
-    let xhr = createRequest(onLoad, onError);
+  const loadRestaurant = function (onLoad, onError) {
+    const xhr = createRequest(onLoad, onError);
     xhr.open('GET', UrlData.LOAD.restaurant);
     xhr.send();
   };
